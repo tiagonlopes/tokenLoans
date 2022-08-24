@@ -1,4 +1,5 @@
 # TokenLoans
+## Decentralized Finance for Everyone
 
 <p align='center'> <img src='images/decentralized_finance.jpg'></p>
 
@@ -50,37 +51,37 @@ This function is public and can only be called before the fundraising ends. The 
 
 <p align='left'> <img src='images/balance_of_sender.JPG' width="200"></p>
 
-##### Make Monthly Payment
+#### Make Monthly Payment
 
 <p align='left'> <img src='images/make_monthly_payment.JPG' width="200"></p>
 
 Only the owner can call this function after the fundraising ends. It takes the number of tokens sold and divides that between the number of monthly payments. It sends out a payment to investors proportional to the number of tokens they bought. It does not take into account possible early payments made by the borrower. 
 
-### Send Payment to Investors
+#### Send Payment to Investors
 
 <p align='left'> <img src='images/send_payment.JPG' width="500"></p>
 
 Only the owner can call this function after the fundraising ends. It divides up the amount entered in the interface among investors proportional to the tokens they bought. It is not possible for the borrower to pick one particular investor to receive the payment. The contract does not penalize early payment. 
 
-### Withdraw Funds
+#### Withdraw Funds
 
 <p align='left'> <img src='images/withdraw_funds.JPG' width="500"></p>
 
 Only the owner can call this function after the fundraising ends. The funds raised live in the contract, not in the owner's wallet. The owner has to use this function to withdraw funds.
 
-### Investor Refund Principal
+#### Investor Refund Principal
 
 <p align='left'> <img src='images/investor_refund.JPG' width="200"></p>
 
 Anyone can call this function if two conditions are true: the fundraising time has ended and the fundraising goal hasn't been reached. Investors get refunded without interest. 
 
-### Owner Refund Principal
+#### Owner Refund Principal
 
 <p align='left'> <img src='images/owner_refund.JPG' width="200"></p>
 
 Only the owner can call this fuction before the fundraising ends. Investors get refunded without interest.
 
-### Deposit
+#### Deposit
 
 <p align='left'> <img src='images/deposit.JPG' width="200"></p>
 
@@ -88,43 +89,43 @@ Only the owner can call this function after the fundraising ends. Investors get 
 
 ## Main Public Variables
 
-### Contract Ended Successfully
+#### Contract Ended Successfully
 
 <p align='left'> <img src='images/contract_ended.jpg' width="600"></p>
 
 The default value of this boolean is false. It turns true if all investors get paid within the timeframe specified by the borrower. 
 
-### Fundraising Ended
+#### Fundraising Ended
 
 <p align='left'> <img src='images/fundraising_ended.jpg' width="600"></p>
 
 The default value of this boolean is false. It turns true when the fundraising goal is reached. 
 
-### Percentage Paid to Investors
+#### Percentage Paid to Investors
 
 <p align='left'> <img src='images/percentage_paid.JPG' width="200"></p>
 
 Percentage of total tokens sold that have been refunded. This is usually 1% off due to lack of float type in solidity. 
 
-### Time
+#### Time
 
 <p align='left'> <img src='images/time.JPG' width="200"></p>
 
 The contract timestamps three events: deployment of the contract, fundraising ends, payment to investors is complete. It is possible that one of the last two benchmarks is not met, in that case the value is zero. Like in all solidity contracts time is recorded as number of seconds since Jan 1st 1970.
 
-### Total Contract Funds and Total Supply
+#### Total Contract Funds and Total Supply
 
 <p align='left'> <img src='images/total_supply.JPG' width="300"></p>
 
 totalContractFundsinWei tells the user the total funds in the contract. Total supply is the number of tokens that are outstanding in the hands of investors. This example is from when a fundraising ended and no funds have been withdrawn, the borrower fundraised 250 ether, notice that the number of tokens is higher, the difference is the interest. 
 
-### Outstanding Tokens Minus Contract Funds
+#### Outstanding Tokens Minus Contract Funds
 
 <p align='left'> <img src='images/difference.JPG' width="300"></p>
 
 This variable tells the user the difference between the outstanding tokens and the contract funds. It helps the borrower know how much do they have to deposit in the contract to make the investors whole. 
 
-### Constructors
+#### Constructors and Owner
 
 <p align='left'> <img src='images/maturity_in_months.JPG' width="200"></p>
 
