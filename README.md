@@ -108,7 +108,7 @@ Percentage of total tokens sold that have been refunded. This is usually 1% off 
 
 ### Time
 
-<p align='left'> <img src='images/percentage_paid.JPG' width="300"></p>
+<p align='left'> <img src='images/time.JPG' width="300"></p>
 
 The contract timestamps three events: deployment of the contract, fundraising ends, payment to investors is complete. It is possible that one of the last two benchmarks is not met, in that case the value is zero. Like in all solidity contracts time is recorded as number of seconds since Jan 1st 1970.
 
