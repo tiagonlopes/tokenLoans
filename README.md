@@ -11,12 +11,12 @@ The borrower sells its tokens at a discount and has to buy them back at parity.
 
 In this example the borrower sells its tokens at a ratio of 900 to 1000 i.e. 900 Ether gives the investor 1000 tokens. 
 
-<p align='left'> <img src='images/discounted_rate.JPG'></p>
+<p align='left'> <img src='images/discounted_rate.JPG'width="500"></p>
 
 ### Buy Back the Tokens
 
 The borrower has to buy back the tokens at parity i.e. 1 token gives back 1 Ether. The tokens produced by the contract have the same number of decimals (18) as Ether. 
-<p align='left'> <img src='images/parity_rate.JPG'></p>
+<p align='left'> <img src='images/parity_rate.JPG'width="500"></p>
 
 The difference between the sell and buy price is the interest the investor makes. In this example the investors get an interest of 11.11%. The user has to pay in equal monthly installments. 
 
@@ -31,7 +31,7 @@ Every solidity contract has these limitations. The Ethereum Virtual Machine does
 
 The contract has 5 constructors (as seen in Remix IDE):
 
-<p align='left'> <img src='images/constructors.JPG' width="300"></p>
+<p align='left'> <img src='images/constructors.JPG' width="500"></p>
 
 1) Fundraising goal in wei: If the borrower wants 1 Ether they will have to put 1 followed by 18 zeros. 
 2) Discounted price for 1000TKL: How much will an investor pay for 1000 of the borrower's tokens? This will define the exchange rate the borrower is selling its tokens for. 1000 means that the investors get zero interest. We suggest a number between 950 (interest of 5.26%) and 800 (interest of 25%).
