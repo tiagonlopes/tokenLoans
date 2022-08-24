@@ -40,11 +40,11 @@ The contract has 5 constructors (as seen in Remix IDE):
 
 The wallet that deploys the contract becomes the owner.
 
-## Main Functions of the Contract
+## Main Functions
 
 ### Buy TKL with Wei
 <p align='left'> <img src='images/buy_tkl.JPG' width="200"></p>
-<p align='left'> <img src='images/value.JPG' width="200"></p>
+<p align='left'> <img src='images/value.JPG' width="500"></p>
 
 This function is public and can only be called before the fundraising ends. The fundraising ends when the fundraising goal is reached. In conjunction with the value interface in Remix the investor uses this button to buy tokens, there is a check in the function that stops the investor from buying more tokens than allowed by the fundraising goal. The investor can check the number of tokens bought by clicking the balanceOfSender button. 
 
@@ -68,9 +68,71 @@ Only the owner can call this function after the fundraising ends. It divides up 
 
 Only the owner can call this function after the fundraising ends. The funds raised live in the contract, not in the owner's wallet. The owner has to use this function to withdraw funds.
 
+### Investor Refund Principal
 
+<p align='left'> <img src='images/investor_refund.JPG' width="200"></p>
 
+Anyone can call this function if two conditions are true: the fundraising time has ended and the fundraising goal hasn't been reached. Investors get refunded without interest. 
 
+### Owner Refund Principal
+
+<p align='left'> <img src='images/owner_refund.JPG' width="200"></p>
+
+Only the owner can call this fuction before the fundraising ends. Investors get refunded without interest.
+
+### Deposit
+
+<p align='left'> <img src='images/deposit.JPG' width="500"></p>
+
+Only the owner can call this function after the fundraising ends. Investors get paid from the funds that are in the contract, the borrower has to deposit enought funds to make the payments. 
+
+## Main Public Variables
+
+### Contract Ended Successfully
+
+<p align='left'> <img src='images/contract_ended.JPG' width="600"></p>
+
+The default value of this boolean is false. It turns true if all investors get paid within the timeframe specified by the borrower. 
+
+### Fundraising Ended
+
+<p align='left'> <img src='images/fundraising_ended.JPG' width="600"></p>
+
+The default value of this boolean is false. It turns true when the fundraising goal is reached. 
+
+### Percentage Paid to Investors
+
+<p align='left'> <img src='images/percentage_paid.JPG' width="200"></p>
+
+Percentage of total tokens sold that have been refunded. This is usually 1% off due to lack of float type in solidity. 
+
+### Time
+
+<p align='left'> <img src='images/percentage_paid.JPG' width="300"></p>
+
+The contract timestamps three events: deployment of the contract, fundraising ends, payment to investors is complete. It is possible that one of the last two benchmarks is not met, in that case the value is zero. Like in all solidity contracts time is recorded as number of seconds since Jan 1st 1970.
+
+### Total Contract Funds and Total Supply
+
+<p align='left'> <img src='images/total_supply.JPG' width="300"></p>
+
+totalContractFundsinWei tells the user the total funds in the contract. Total supply is the number of tokens that are outstanding in the hands of investors. This example is from when a fundraising ended and no funds have been withdrawn, the borrower fundraised 250 ether, notice that the number of tokens is higher, the difference is the interest. 
+
+### Outstanding Tokens Minus Contract Funds
+
+<p align='left'> <img src='images/difference.JPG' width="300"></p>
+
+This variable tells the user the difference between the outstanding tokens and the contract funds. It helps the borrower know how much do they have to deposit in the contract to make the investors whole. 
+
+### Constructors
+
+<p align='left'> <img src='images/maturity_in_months.JPG' width="300"></p>
+
+<p align='left'> <img src='images/fundraising_goal.JPG' width="300"></p>
+
+<p align='left'> <img src='images/owner.JPG' width="300"></p>
+
+All the variables that were used as constructors and the owner of the contract are public. 
 
 
 
