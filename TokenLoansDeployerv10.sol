@@ -116,10 +116,21 @@ contract TokenLoans is ERC20, ERC20Detailed, ERC20Mintable {
         msg.value;
     }
 
-    function refund_principal() public payable {
+    function investor_refund_principal() public payable {
         uint number_of_fundraising_seconds = number_of_fundraising_days * 1 days;
         uint seconds_since_deployment = now - time_contract_deployment;
         require (seconds_since_deployment>number_of_fundraising_seconds);
+        require (fundraising_ended == false);
+        uint amount = address(this).balance;
+         for (uint i = 0; i < numberOfInvestors; i++) {
+            uint investorPayment = amount * _investorTokens[_investorAddresses[i]]/totalTokens;
+            address wallet_address = _investorAddresses[i];
+            address payable wallet_address_payable = address(uint160(wallet_address));
+            wallet_address_payable.transfer(investorPayment);
+            _burn(_investorAddresses[i], investorPayment);
+        }       
+    }
+        function owner_refund_principal() public onlyOwner payable {
         require (fundraising_ended == false);
         uint amount = address(this).balance;
          for (uint i = 0; i < numberOfInvestors; i++) {
