@@ -82,7 +82,7 @@ Only the owner can call this fuction before the fundraising ends. Investors get 
 
 ### Deposit
 
-<p align='left'> <img src='images/deposit.JPG' width="500"></p>
+<p align='left'> <img src='images/deposit.JPG' width="200"></p>
 
 Only the owner can call this function after the fundraising ends. Investors get paid from the funds that are in the contract, the borrower has to deposit enought funds to make the payments. 
 
@@ -90,13 +90,13 @@ Only the owner can call this function after the fundraising ends. Investors get 
 
 ### Contract Ended Successfully
 
-<p align='left'> <img src='images/contract_ended.JPG' width="600"></p>
+<p align='left'> <img src='images/contract_ended.jpg' width="600"></p>
 
 The default value of this boolean is false. It turns true if all investors get paid within the timeframe specified by the borrower. 
 
 ### Fundraising Ended
 
-<p align='left'> <img src='images/fundraising_ended.JPG' width="600"></p>
+<p align='left'> <img src='images/fundraising_ended.jpg' width="600"></p>
 
 The default value of this boolean is false. It turns true when the fundraising goal is reached. 
 
@@ -126,7 +126,7 @@ This variable tells the user the difference between the outstanding tokens and t
 
 ### Constructors
 
-<p align='left'> <img src='images/maturity_in_months.JPG' width="300"></p>
+<p align='left'> <img src='images/maturity_in_months.JPG' width="200"></p>
 
 <p align='left'> <img src='images/fundraising_goal.JPG' width="300"></p>
 
