@@ -30,7 +30,7 @@ Every solidity contract has these limitations. The Ethereum Virtual Machine does
 
 The contract has 5 constructors (as seen in Remix IDE):
 
-<p align='left'> <img src='images/constructors.JPG'></p>
+<p align='left'> <img src='images/constructors.JPG' width="50"></p>
 
 1) Fundraising goal in wei: If the borrower wants 1 Ether it will have to put 1 followed by 18 zeros. 
 2) Discounted price for 1000TKL: How much will an investor pay for 1000 of the borrower's tokens? This will define the exchange rate the borrower is selling its tokens for. 1000 means that the investors get zero interest. We suggest a number between 950 and 800.
