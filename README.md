@@ -1,6 +1,6 @@
 # TokenLoans
 
-<p align='center'> <img src='images/decentralized_fiance.jpg'></p>
+<p align='center'> <img src='images/decentralized_finance.jpg'></p>
 
 TokenLoans is a solidity contract that allows borrowers to fundraise Ether for a project. Investors can buy the tokens produced by the contract and they get paid back in equal monthly installments including an interest. The borrower selects the terms of the contract.
 
