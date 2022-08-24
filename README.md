@@ -42,7 +42,7 @@ The wallet that deploys the contract becomes the owner.
 
 ## Main Functions
 
-### Buy TKL with Wei
+#### Buy TKL with Wei
 <p align='left'> <img src='images/buy_tkl.JPG' width="200"></p>
 <p align='left'> <img src='images/value.JPG' width="500"></p>
 
@@ -50,7 +50,7 @@ This function is public and can only be called before the fundraising ends. The 
 
 <p align='left'> <img src='images/balance_of_sender.JPG' width="200"></p>
 
-### Make Monthly Payment
+##### Make Monthly Payment
 
 <p align='left'> <img src='images/make_monthly_payment.JPG' width="200"></p>
 
@@ -108,7 +108,7 @@ Percentage of total tokens sold that have been refunded. This is usually 1% off 
 
 ### Time
 
-<p align='left'> <img src='images/time.JPG' width="300"></p>
+<p align='left'> <img src='images/time.JPG' width="200"></p>
 
 The contract timestamps three events: deployment of the contract, fundraising ends, payment to investors is complete. It is possible that one of the last two benchmarks is not met, in that case the value is zero. Like in all solidity contracts time is recorded as number of seconds since Jan 1st 1970.
 
