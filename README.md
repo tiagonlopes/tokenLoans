@@ -21,13 +21,8 @@ The difference between the sell and buy price is the interest the investor makes
 
 ## What the Contract Cannot Do
 
-*Force payment
-*Schedule a payment 
-
-```
->conda install plotly
->conda install -c conda-forge fbprophet
-```
+* Force payment
+* Schedule a payment 
 
 Every solidity contract has these limitations. The Ethereum Virtual Machine does not offer a scheduling service and it cannot extract money from a private wallet. The contract, however, does provide two public variables that can be used to determine the health of the contract: percentage_paid_to_investors and contract_ended_successfully (this boolean turns true if the investors were paid within the timeframe stated by the borrower).
 
